@@ -7,31 +7,32 @@ const projectList = [
   {
     name: "Projet React Native",
     description:
-      "📱 Application mobile pour gérer des tâches avec React Native.",
+      "📱 Application mobile pour la gestion de cartes de fidélité pour un supermarché avec React Native.",
     link: "https://github.com/NzetemMartin/Project_React-Native_MobileApp_SantaLucia.git",
     demo: "https://demo-reactnative-app.vercel.app",
     icon: <FaMobileAlt className="text-blue-500 text-3xl" />,
   },
   {
     name: "Portfolio Web",
-    description: "🌐 Site personnel moderne en React + TailwindCSS.",
-    link: "#",
-    demo: "https://github.com/NzetemMartin/Portfolio-site-web-avec-React-.git",
+    description: "🌐 Site personnel moderne développé en React et TailwindCSS.",
+    link: "https://github.com/NzetemMartin/Portfolio-site-web-avec-React-.git",
+    demo: "#",
     icon: <FaGlobe className="text-purple-500 text-3xl" />,
   },
   {
     name: "Projet React",
-    description: "💻 Application web statique responsive et rapide.",
-    link: "https://github.com/NzetemMartin/Application-Web-sass-de-vente-de-vien-en-REACT.git",
+    description:
+      "💻 Application web dynamique, responsive et rapide utilisant React, JavaScript, Node.js, Express, PostgreSQL, RESTful API et JWT.",
+    link: "https://github.com/NzetemMartin/wineApp-Frontend",
     demo: "https://react-ecommerce-wine.vercel.app",
     icon: <FaReact className="text-cyan-500 text-3xl" />,
   },
   {
     name: "API Backend Node.js",
     description:
-      "⚙️ Création d'une API REST avec Node.js, Express et PostgreSQL.",
-    link: "https://github.com/NzetemMartin/Projet-React-Application-web-de-vente-de-vin-avec-une-API-REST.git",
-    demo: "https://api-demo-backend-node.vercel.app", // <-- remplace par ton vrai lien de démo si différent
+      "⚙️ Création d'une API REST avec Node.js, Express et PostgreSQL pour gérer les données et les utilisateurs.",
+    link: "https://github.com/NzetemMartin/wineApp-Backend",
+    demo: "https://api-demo-backend-node.vercel.app", // <-- remplace par ton vrai lien de démo
     icon: <FaNodeJs className="text-green-600 text-3xl" />,
   },
 ];
