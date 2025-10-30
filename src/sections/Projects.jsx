@@ -15,7 +15,7 @@ const projectList = [
   {
     name: "Portfolio Web",
     description: "🌐 Site personnel moderne développé en React et TailwindCSS.",
-    link: "https://github.com/Raoul-Ekwa/Portfolio-site-web-avec-react",
+    link: "https://github.com/NzetemMartin/Portfolio-site-web-avec-react",
     demo: "#",
     icon: <FaGlobe className="text-purple-500 text-3xl" />,
   },
