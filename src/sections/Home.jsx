@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { FaGithub, FaEnvelope } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
 import profile from "../assets/profile.jpg";
-import cvPDF from "../../src/assets/My_CV.pdf"; // 👈 Import du fichier PDF
+import cvPDF from "../../src/assets/My_CV.pdf"; //  Import du fichier PDF
 
 const Home = () => {
   const [showCV, setShowCV] = useState(false);

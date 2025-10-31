@@ -3,25 +3,25 @@ import { motion } from "framer-motion";
 
 const educationData = [
   {
-    title: "Baccalauréat Scientifique (Série C)",
-    school: "Lycée Général Leclerc, Yaoundé",
-    period: "2017 – 2018",
-    description:
-      "Spécialisation en Mathématiques et Physique, avec une forte orientation vers la logique et la résolution de problèmes.",
-  },
-  {
-    title: "Licence en Informatique",
-    school: "Université de Douala",
-    period: "2018 – 2021",
-    description:
-      "Formation axée sur le développement logiciel, les bases de données, les algorithmes et la programmation orientée objet.",
-  },
-  {
     title: "École Multimédia de Paris",
-    school: "Étudiant en développement full stack",
-    period: "2023 – Présent | Paris, France",
+    school: "Bachelor Développement Web & Conception d'Applications (En cours)",
+    period: "2023 – 2026 | Paris, France",
     description:
-      "Formation orientée sur les technologies modernes du web et du mobile, incluant React, Node.js, et la conception d’expériences interactives.",
+      "Formation orientée full-stack centrée sur les technologies modernes du web et du mobile (React, Node.js, etc.), avec des projets collaboratifs, des méthodologies Agile et la conception d’expériences interactives.",
+  },
+  {
+    title: "Bachelor 1 Cycle Ingénieur",
+    school: "ECE Paris",
+    period: "2023 – 2024",
+    description:
+      "Formation d’ingénieur généraliste axée sur des bases scientifiques et techniques solides.",
+  },
+  {
+    title: "Baccalauréat Scientifique – Mention Bien",
+    school: "New Century Institute of Learning, Yaoundé",
+    period: "2015 – 2021",
+    description:
+      "Formation scientifique rigoureuse développant l’esprit logique, la méthode et les capacités d’analyse.",
   },
 ];
 

@@ -7,16 +7,16 @@ const projectList = [
   {
     name: "Projet React Native",
     description:
-      "📱 Application mobile pour la gestion de cartes de fidélité pour un supermarché avec React Native.",
-    link: "https://github.com/NzetemMartin/Project_React-Native_MobileApp_SantaLucia.git",
-    demo: "https://demo-reactnative-app.vercel.app",
+      "📱 Application mobile de gestion des cartes de fidélité pour un supermarché, développée avec React Native",
+    link: "https://github.com/NzetemMartin/Application-Mobile-SantaLucia",
+    demo: "https://drive.google.com/file/d/103FBBFNXfl6q0Hll_8cr_J8TQs7L7hfN/preview",
     icon: <FaMobileAlt className="text-blue-500 text-3xl" />,
   },
   {
     name: "Portfolio Web",
     description: "🌐 Site personnel moderne développé en React et TailwindCSS.",
     link: "https://github.com/NzetemMartin/Portfolio-site-web-avec-react",
-    demo: "#",
+    demo: "https://drive.google.com/file/d/1JF1SA9yoixq_lFoGaRQxWdUnIVDQowZC/preview",
     icon: <FaGlobe className="text-purple-500 text-3xl" />,
   },
   {
@@ -24,7 +24,7 @@ const projectList = [
     description:
       "💻 Application web dynamique, responsive et rapide utilisant React, JavaScript, Node.js, Express, PostgreSQL, RESTful API et JWT.",
     link: "https://github.com/NzetemMartin/wineApp-Frontend",
-    demo: "https://react-ecommerce-wine.vercel.app",
+    demo: "https://drive.google.com/file/d/10PomfckPjKi2B4gfT0bs_vNXXp91SSgd/preview",
     icon: <FaReact className="text-cyan-500 text-3xl" />,
   },
   {
@@ -32,7 +32,7 @@ const projectList = [
     description:
       "⚙️ Création d'une API REST avec Node.js, Express et PostgreSQL pour gérer les données et les utilisateurs.",
     link: "https://github.com/NzetemMartin/wineApp-Backend",
-    demo: "https://api-demo-backend-node.vercel.app", // <-- remplace par ton vrai lien de démo
+    demo: "https://drive.google.com/file/d/1ENjyCYJe-e4byxU1OQJkFVMeQ80siEf7/preview",
     icon: <FaNodeJs className="text-green-600 text-3xl" />,
   },
 ];
@@ -40,10 +40,12 @@ const projectList = [
 const Projects = () => {
   const [showModal, setShowModal] = useState(false);
   const [demoUrl, setDemoUrl] = useState("");
+  const [loading, setLoading] = useState(true);
 
   const openModal = (url) => {
     setDemoUrl(url);
     setShowModal(true);
+    setLoading(true); // On active le spinner
   };
 
   const closeModal = () => {
@@ -111,11 +113,11 @@ const Projects = () => {
       {/* Modale */}
       {showModal && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50"
+          className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50"
           onClick={closeModal}
         >
           <div
-            className="bg-white w-[90%] max-w-4xl h-[80%] rounded-lg overflow-hidden shadow-lg relative"
+            className="bg-white w-[95%] max-w-6xl h-[90%] rounded-lg overflow-hidden shadow-lg relative flex items-center justify-center"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Bouton de fermeture */}
@@ -126,16 +128,36 @@ const Projects = () => {
               <IoMdClose />
             </button>
 
-            {/* Contenu iframe */}
+            {/* Spinner de chargement */}
+            {loading && (
+              <div className="absolute inset-0 flex items-center justify-center z-20 bg-black bg-opacity-30">
+                <div className="loader ease-linear rounded-full border-8 border-t-8 border-gray-200 h-20 w-20"></div>
+              </div>
+            )}
+
+            {/* Iframe vidéo */}
             <iframe
               src={demoUrl}
               title="Demo Project"
               className="w-full h-full border-none"
-              allowFullScreen
+              allow="fullscreen"
+              onLoad={() => setLoading(false)}
             ></iframe>
           </div>
         </div>
       )}
+
+      {/* Styles du spinner */}
+      <style>{`
+        .loader {
+          border-top-color: #3498db;
+          animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+      `}</style>
     </section>
   );
 };
